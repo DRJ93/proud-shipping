@@ -1,0 +1,9 @@
+@mixin hoverCard() {
+    &:hover {
+        transition-duration: 0.3s;
+        background-image: none;
+        background-color: $secondary-color;
+        opacity: 0.9;
+        color: $tertiary-color;    
+    }
+}

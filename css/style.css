@@ -1,0 +1,752 @@
+footer {
+  display: flex;
+  width: 100%;
+  height: 20%;
+  background-color: #152350;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .social-media {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+  padding: 10px 100px;
+  font-size: 30px;
+  gap: 1rem;
+}
+footer .social-media a {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  padding: 15px;
+  background-color: #9fa3cc;
+  border-radius: 100%;
+  color: #152350;
+  text-align: center;
+}
+footer .social-media a i {
+  text-align: center;
+  transition: 1s;
+}
+footer .social-media a i:hover {
+  transform: rotate(360deg);
+}
+footer img {
+  padding: 5% 10%;
+}
+
+.menu-hamburguesa {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.menu-hamburguesa .menu-icon {
+  cursor: pointer;
+  display: flex;
+  width: 50px;
+  flex-direction: column;
+  gap: 5px;
+  transition: 0.5s;
+}
+.menu-hamburguesa .menu-icon:hover span:nth-child(2), .menu-hamburguesa .menu-icon:hover span:nth-child(3) {
+  width: 40px;
+}
+.menu-hamburguesa .menu-icon span {
+  display: block;
+  height: 3px;
+  width: 40px;
+  background-color: #c8d5f3;
+  transition: 0.5s;
+}
+.menu-hamburguesa .menu-icon span:nth-child(2) {
+  width: 30px;
+  transition: 0.3s;
+}
+.menu-hamburguesa .menu-icon span:nth-child(3) {
+  width: 20px;
+  transition: 0.4s;
+}
+
+.drawer {
+  display: block;
+}
+
+.overlay {
+  display: block;
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: -35rem;
+  width: 30rem;
+  height: 100%;
+  background-color: #152350;
+  color: #c8d5f3;
+  overflow-y: auto;
+  transition: 0.5s ease all;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+.drawer .drawer-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: self-start;
+  padding: 10px;
+}
+.drawer .drawer-header button {
+  background: none;
+  border: none;
+  color: #c8d5f3;
+  font-size: 30px;
+  cursor: pointer;
+}
+.drawer ul {
+  list-style: none;
+  padding: 20px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: self-start;
+  gap: 10px;
+}
+.drawer ul li {
+  padding: 0 10px;
+  transition: 0.5s;
+}
+.drawer ul li:hover {
+  transition-duration: 0.3s;
+  transform: scale(1.2);
+  border-left: 1px solid #c8d5f3;
+}
+.drawer ul li .nav-link {
+  color: #c8d5f3;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(21, 35, 80, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 900;
+}
+
+.drawer-open {
+  right: 0;
+}
+
+.overlay-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  /*Slider bg*/
+}
+.hero-container .overlay-hero {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  opacity: 1;
+}
+.hero-container .bg-slider-img {
+  z-index: auto;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: slide 10s ease-in-out infinite;
+}
+.hero-container .bg-slider-img:nth-child(1) {
+  animation-delay: 0s;
+}
+.hero-container .bg-slider-img:nth-child(2) {
+  animation-delay: 2s;
+}
+.hero-container .bg-slider-img:nth-child(3) {
+  animation-delay: 4s;
+}
+.hero-container .bg-slider-img:nth-child(4) {
+  animation-delay: 6s;
+}
+.hero-container .bg-slider-img:nth-child(5) {
+  animation-delay: 8s;
+}
+.hero-container .hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+.hero-container .hero-section img {
+  padding-top: 15%;
+}
+.hero-container .hero-section div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  text-align: center;
+  width: 60%;
+  padding-bottom: 50px;
+}
+.hero-container .hero-section div .saber-mas {
+  padding: 10px 15px;
+  border-radius: 1000px;
+  background-color: rgba(200, 213, 243, 0.5);
+  border: 1px #c8d5f3 solid;
+  cursor: pointer;
+  font-size: 35px;
+  text-decoration: none;
+  color: #c8d5f3;
+}
+.hero-container .hero-section div .saber-mas:hover {
+  transition-duration: 0.3s;
+  color: #9fa3cc;
+  background-color: #c8d5f3;
+  border: 1px rgba(200, 213, 243, 0.5) solid;
+}
+.hero-container .hero-section div .saber-mas i {
+  width: 100%;
+  font-size: 40px;
+}
+.hero-container .hero-section div p {
+  font-size: 25px;
+  text-align: center;
+  color: #c8d5f3;
+  padding: 0 0 50px 0;
+}
+
+/*fin del slider*/
+.about-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  text-align: center;
+  width: 80%;
+  padding: 6rem 0;
+  text-align: center;
+  gap: 2em;
+  z-index: 20;
+}
+
+.our-services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  text-align: center;
+  width: 100%;
+  gap: 2rem;
+  padding: 0 0 4rem;
+}
+
+.clientes-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  text-align: center;
+  padding: 4rem 0;
+  width: 70%;
+  gap: 2rem;
+}
+.clientes-container .clientes-img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.clientes-container .clientes-img-container div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.clientes-container .clientes-img-container div img {
+  display: inline-block;
+  padding: 20px 100px;
+}
+.clientes-container .clientes-img-container div .clientes-name {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 450;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  text-align: center;
+  text-align: left;
+  padding: 4rem 0;
+  gap: 1rem;
+}
+
+.us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  text-align: center;
+  width: 100%;
+  gap: 1rem;
+}
+.us .bg-img-about-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  height: 50vh;
+  background-image: url("/src/img/servicios-en-destino.png");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 0;
+}
+.us .bg-img-about-us h1 {
+  color: rgba(200, 213, 243, 0.5);
+}
+.us .text-nosotros {
+  padding-top: 2rem;
+  width: 80%;
+}
+.us .m-v-v-buttom {
+  display: flex;
+  flex-direction: row;
+  padding: 4rem 7rem;
+}
+.us .m-v-v-buttom div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  text-align: center;
+  padding: 0 2rem;
+}
+.us .m-v-v-buttom img {
+  width: 100px;
+  height: 100px;
+  padding: 0;
+}
+.us .m-v-v-buttom p {
+  font-weight: bold;
+}
+
+.m-v-v-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  text-align: center;
+  flex-direction: row;
+  width: 80%;
+  height: 100%;
+  text-align: left;
+  padding: 4rem 7rem;
+  gap: 2rem;
+  border-left: 2px dashed #152350;
+  background-color: rgba(159, 163, 204, 0.5);
+  margin: 3rem 0;
+}
+.m-v-v-container img {
+  width: 300px;
+  border-radius: 10000px;
+}
+.m-v-v-container div h2 {
+  padding: 0 0 1rem 0;
+}
+.m-v-v-container:nth-child(2n) {
+  text-align: right;
+  flex-direction: row-reverse;
+  border-right: 2px dashed #152350;
+  background-color: transparent;
+  border-left: 0;
+}
+
+.nuestros-ejecutivos-container {
+  display: flex;
+  flex-direction: column;
+}
+.nuestros-ejecutivos-container .bg-img-ejecutivos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 35vh;
+  background-image: url("/src/img/alianzas_estrategicas.png");
+  width: 100%;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 0;
+  text-align: center;
+}
+.nuestros-ejecutivos-container .bg-img-ejecutivos h2 {
+  color: rgba(200, 213, 243, 0.5);
+}
+.nuestros-ejecutivos-container .ejecutivos-container {
+  display: grid;
+  grid-template-areas: "a b" "c d";
+  width: 100%;
+  padding: 4rem 0;
+  justify-items: center;
+}
+.nuestros-ejecutivos-container .ejecutivos-container .ejecutivo {
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem;
+  gap: 2rem;
+  width: 70%;
+  align-items: center;
+  text-align: center;
+}
+.nuestros-ejecutivos-container .ejecutivos-container .ejecutivo p {
+  padding: 1rem 3rem;
+  text-align: center;
+  text-align: justify;
+}
+.nuestros-ejecutivos-container .ejecutivos-container .ejecutivo img {
+  width: 40%;
+}
+.nuestros-ejecutivos-container .ejecutivos-container .ejecutivo a {
+  text-decoration: none;
+  color: #152350;
+}
+.nuestros-ejecutivos-container .ejecutivos-container .ejecutivo:nth-child(1) {
+  grid-area: "a";
+}
+.nuestros-ejecutivos-container .ejecutivos-container .ejecutivo:nth-child(2) {
+  grid-area: "b";
+}
+.nuestros-ejecutivos-container .ejecutivos-container .ejecutivo:nth-child(3) {
+  grid-area: "c";
+}
+.nuestros-ejecutivos-container .ejecutivos-container .ejecutivo:nth-child(4) {
+  grid-area: "d";
+}
+
+.contacto-hero {
+  height: 45vh;
+  width: 100%;
+  background-image: url(../../src/img/alianzas_estrategicas.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  text-align: center;
+  justify-self: center;
+  justify-content: center;
+  color: rgba(159, 163, 204, 0.5);
+}
+.contacto-hero h1 {
+  padding: 2rem;
+}
+
+.contacto-content {
+  display: flex;
+  flex-direction: row;
+  height: 47vh;
+  width: 100%;
+  padding: 2rem 0 0 0;
+}
+.contacto-content .contacto-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  text-align: center;
+  justify-content: center;
+  width: 50%;
+}
+.contacto-content .contacto-info ul {
+  padding: 2rem;
+  list-style: none;
+  text-align: left;
+}
+.contacto-content .contacto-info ul li {
+  padding: 5px;
+}
+.contacto-content .contacto-map {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  text-align: center;
+  width: 50%;
+}
+.contacto-content .contacto-map iframe {
+  padding: 2rem 0 0 1rem;
+  width: 80%;
+  height: 80%;
+}
+
+.form-contacto {
+  display: flex;
+  justify-self: center;
+  text-decoration: none;
+  height: 7vh;
+  padding: 1rem;
+  color: #9fa3cc;
+  background-color: #c8d5f3;
+  border-radius: 10000px;
+}
+.form-contacto:hover {
+  background-color: #152350;
+  color: #c8d5f3;
+  transition: 0.5s;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3px;
+  padding: 20px;
+}
+.cards-container .opacity-cards {
+  width: 350px;
+  height: 600px;
+  background-color: rgb(0, 0, 0);
+}
+.cards-container .opacity-cards:hover {
+  transition-duration: 0.3s;
+  transform: scale(1.09);
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  z-index: 22;
+}
+.cards-container .opacity-cards:hover:nth-child(1) {
+  background-image: url(/src/img/soluciones-mexproud-shipping-paqueteria-internacional-origen_25-600x750.png);
+  background-position: center;
+}
+.cards-container .opacity-cards:hover:nth-child(2) {
+  background-image: url(/src/img/soluciones-mexproud-shipping-paqueteria-internacional-transportacion-terrestre_25-600x750.png);
+  background-position: center;
+}
+.cards-container .opacity-cards:hover:nth-child(3) {
+  background-image: url(/src/img/soluciones-mexproud-shipping-paqueteria-internacional-transportacion-aerea_25-600x750.png);
+  background-position: center;
+}
+.cards-container .opacity-cards:hover:nth-child(4) {
+  background-image: url(/src/img/soluciones-mexproud-shipping-paqueteria-internacional-transportacion-maritima_25-600x750.png);
+  background-position: center;
+}
+.cards-container .opacity-cards .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-wrap: wrap;
+}
+.cards-container .opacity-cards .card .card-title {
+  font-size: 25px;
+}
+.cards-container .opacity-cards:nth-child(1) .card {
+  background-image: url(/src/img/soluciones-mexproud-shipping-paqueteria-internacional-origen_25-600x750.png);
+  background-position: left;
+}
+.cards-container .opacity-cards:nth-child(1) .card:hover {
+  transition-duration: 0.3s;
+  background-image: none;
+  background-color: #9fa3cc;
+  opacity: 0.9;
+  color: #c8d5f3;
+}
+.cards-container .opacity-cards:nth-child(2) .card {
+  background-image: url(/src/img/soluciones-mexproud-shipping-paqueteria-internacional-transportacion-terrestre_25-600x750.png);
+  background-position: center;
+}
+.cards-container .opacity-cards:nth-child(2) .card:hover {
+  transition-duration: 0.3s;
+  background-image: none;
+  background-color: #9fa3cc;
+  opacity: 0.9;
+  color: #c8d5f3;
+}
+.cards-container .opacity-cards:nth-child(3) .card {
+  background-image: url(/src/img/soluciones-mexproud-shipping-paqueteria-internacional-transportacion-aerea_25-600x750.png);
+  background-position: center;
+}
+.cards-container .opacity-cards:nth-child(3) .card:hover {
+  transition-duration: 0.3s;
+  background-image: none;
+  background-color: #9fa3cc;
+  opacity: 0.9;
+  color: #c8d5f3;
+}
+.cards-container .opacity-cards:nth-child(4) .card {
+  background-image: url(/src/img/soluciones-mexproud-shipping-paqueteria-internacional-transportacion-maritima_25-600x750.png);
+  background-position: center;
+}
+.cards-container .opacity-cards:nth-child(4) .card:hover {
+  transition-duration: 0.3s;
+  background-image: none;
+  background-color: #9fa3cc;
+  opacity: 0.9;
+  color: #c8d5f3;
+}
+
+/*Html-slider
+     <div class="slider-box" style=" --width:400px; --height:300px; --quantity: 5;">
+                <div class="slider-list">
+                    <div class="slider-item" style="--position:1;">
+                        <img src="/src/img/mexproud-shipping-busca-servicios-logistica-y-paqueteria-maritima.png" alt="">
+                        <h2 class="slider-title">Texto 1</h2>
+                    </div>
+                    <div class="slider-item" style="--position:2;">
+                        <img src="/src/img/mexproud-shipping-logistica-interbnacional-aduanas-china.png" alt="">
+                        <h2 class="slider-title">Texto 2</h2>
+                    </div>
+                    <div class="slider-item" style="--position:3;">
+                        <img src="src/img/mexproud-shipping-logistica-interbnacional-aduanas-mexico.jpg" alt="">
+                        <h2 class="slider-title">Texto 3</h2>
+                    </div>
+                    <div class="slider-item" style="--position:4;">
+                        <img src="/src/img/mexproud-shipping-logistica-interbnacional-aduanas-usa.jpg" alt="">
+                        <h2 class="slider-title">Texto 4</h2>
+                    </div>
+                    <div class="slider-item" style="--position:5;">
+                        <img src="/src/img/mexproud-shipping-paqueteria-aerea.png" alt="">
+                        <h2 class="slider-title">Texto 5</h2>
+                    </div>
+                </div>
+            </div>
+
+*/
+.slider-box {
+  width: 100%;
+  height: var(--height);
+  overflow: hidden;
+}
+.slider-box .slider-list {
+  padding: 0;
+  display: flex;
+  width: 100%;
+  min-width: calc((--width) * var(--quantity));
+  position: relative;
+}
+.slider-box .slider-list .slider-item {
+  width: var(--width);
+  height: var(--height);
+  position: absolute;
+  left: 100%;
+  animation: auto-slider 10s linear infinite;
+  animation-delay: calc(10s / var(--quantity) * (var(--position) - 1) - 10s);
+}
+.slider-box .slider-list .slider-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes auto-slider {
+  from {
+    left: 100%;
+  }
+  to {
+    left: calc(var(--width) * -1);
+  }
+}
+* {
+  margin: 0;
+  font-size: 20px;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+* h1 {
+  font-size: 50px;
+}
+* h2 {
+  font-size: 35px;
+}
+* i {
+  font-size: 30px;
+}
+* img {
+  display: inline-block;
+}
+
+body {
+  background-color: rgba(200, 213, 243, 0.5);
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 7vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100000;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,66 @@
+
+
+/*Html-slider
+     <div class="slider-box" style=" --width:400px; --height:300px; --quantity: 5;">
+                <div class="slider-list">
+                    <div class="slider-item" style="--position:1;">
+                        <img src="/src/img/mexproud-shipping-busca-servicios-logistica-y-paqueteria-maritima.png" alt="">
+                        <h2 class="slider-title">Texto 1</h2>
+                    </div>
+                    <div class="slider-item" style="--position:2;">
+                        <img src="/src/img/mexproud-shipping-logistica-interbnacional-aduanas-china.png" alt="">
+                        <h2 class="slider-title">Texto 2</h2>
+                    </div>
+                    <div class="slider-item" style="--position:3;">
+                        <img src="src/img/mexproud-shipping-logistica-interbnacional-aduanas-mexico.jpg" alt="">
+                        <h2 class="slider-title">Texto 3</h2>
+                    </div>
+                    <div class="slider-item" style="--position:4;">
+                        <img src="/src/img/mexproud-shipping-logistica-interbnacional-aduanas-usa.jpg" alt="">
+                        <h2 class="slider-title">Texto 4</h2>
+                    </div>
+                    <div class="slider-item" style="--position:5;">
+                        <img src="/src/img/mexproud-shipping-paqueteria-aerea.png" alt="">
+                        <h2 class="slider-title">Texto 5</h2>
+                    </div>
+                </div>
+            </div>
+
+*/
+
+
+.slider-box{
+    width: 100%;
+    height: var(--height);
+    overflow: hidden;
+  //  mask-image: linear-gradient(to right, transparent, $primary-color 10% 90%, transparent);
+    .slider-list{
+        padding: 0;
+        display: flex;
+        width: 100%;
+        min-width: calc((--width)*var(--quantity));
+        position: relative;
+        .slider-item{
+            width: var(--width);
+            height: var(--height);
+            position: absolute;
+            left: 100%;
+            animation: auto-slider 10s linear infinite;
+            animation-delay: calc(((10s / var(--quantity)) * (var(--position) - 1)) - 10s);
+            img{
+                width:100%;
+                height: 100%;
+                object-fit:cover;
+            }
+        }
+    }
+}
+@keyframes auto-slider {
+    from{
+        left: 100%;
+    }
+    to{
+        left: calc((var(--width) * -1));
+    }
+}
+    

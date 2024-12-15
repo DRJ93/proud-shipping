@@ -1,0 +1,68 @@
+.contacto-hero {
+    height: 45vh;
+    width: 100%;
+    background-image: url(../../src/img/alianzas_estrategicas.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    @include centrarDiv;
+    justify-self: center;
+    justify-content: center;
+    color: $opacity-secondary-color;
+
+    h1 {
+        padding: 2rem;
+    }
+
+}
+
+.contacto-content {
+    display: flex;
+    flex-direction: row;
+    height: 47vh;
+    width: 100%;
+    padding: 2rem 0 0 0;
+    .contacto-info {
+            @include centrarDiv;
+            justify-content: center;
+            width: 50%;
+            ul {
+                padding: 2rem;
+                list-style: none;
+                text-align: left;
+
+                li {
+                    padding: 5px;
+                }
+            }
+
+       
+        }
+        .contacto-map {
+            @include centrarDiv;
+            width: 50%;
+            iframe{
+                padding: 2rem 0 0 1rem;
+                width: 80%;
+                height: 80%;
+            }
+        }
+    }
+
+    .form-contacto {
+        display: flex;
+        justify-self: center;
+        text-decoration: none;
+        height: 7vh;
+        padding: 1rem;
+        color: $secondary-color;
+        background-color: $tertiary-color;
+        border-radius: 10000px;
+      
+        &:hover {
+            background-color: $primary-color;
+            color: $tertiary-color;
+            transition: 0.5s;
+        }
+    }

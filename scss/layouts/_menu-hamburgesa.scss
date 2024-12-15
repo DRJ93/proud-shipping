@@ -1,0 +1,133 @@
+
+.menu-hamburguesa {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+
+  .menu-icon {
+    cursor: pointer;
+    display: flex;
+    width: 50px;
+    flex-direction: column;
+    gap: 5px;
+    transition: 0.5s;
+
+    &:hover {
+      span {
+
+        &:nth-child(2),
+        &:nth-child(3) {
+          width: 40px;
+        }
+      }
+    }
+
+    span {
+      display: block;
+      height: 3px;
+      width: 40px;
+      background-color: $tertiary-color;
+      transition: 0.5s;
+
+      &:nth-child(2) {
+        width: 30px;
+        transition: 0.3s;
+      }
+
+      &:nth-child(3) {
+        width: 20px;
+        transition: 0.4s;
+      }
+    }
+  }
+}
+
+.drawer {
+  display: block;
+}
+
+.overlay {
+  display: block;
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: -35rem;
+  width: 30rem;
+  height: 100%;
+  background-color: $primary-color;
+  color: $tertiary-color;
+  overflow-y: auto;
+  transition: 0.5s ease all;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+
+  .drawer-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: self-start;
+    padding: 10px;
+
+    button {
+      background: none;
+      border: none;
+      color: $tertiary-color;
+      font-size: 30px;
+      cursor: pointer;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: self-start;
+    gap: 10px;
+    li{
+      padding:  0 10px;
+      transition: 0.5s;
+    &:hover{
+      transition-duration: 0.3s;
+      transform: scale(1.2);
+      border-left: 1px solid $tertiary-color;
+    }
+         
+    .nav-link {
+      color: $tertiary-color;
+      font-size: 1.3rem;
+      text-decoration: none;
+     
+    }
+  }
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $opacity-primary-color;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+  z-index: 900;
+}
+
+.drawer-open {
+  right: 0; //siempre debe coincidir esta propiedad con el de la linea 190, en la clase drawer.
+}
+
+.overlay-active {
+  opacity: 1;
+  visibility: visible;
+}

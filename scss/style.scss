@@ -1,0 +1,46 @@
+@import "../scss/utilities/colors";
+@import "../scss/utilities/centrar-divs";
+@import "../scss/layouts/_footer.scss";
+@import "../scss/layouts/_menu-hamburgesa.scss";
+@import "../scss/layouts/index";
+@import "../scss/layouts/form";
+@import "../scss/layouts/nosotros";
+@import "../scss/layouts/contacto";
+@import "../scss/components/_cards.scss";
+
+@import "../scss/components/_slider.scss";
+
+*{
+    margin: 0;
+    font-size: 20px;
+    padding: 0;
+    box-sizing: border-box;
+
+    h1{
+        font-size: 50px;
+    }
+    h2{
+        font-size: 35px;
+    }
+    i{
+        font-size: 30px;
+    }
+    font-family:sans-serif;
+    img{
+        display: inline-block;
+    }
+   
+}
+body{
+    background-color: $opacity-tertiary-color;
+}
+header{
+    position: fixed;
+    width: 100%;
+    height: 7vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100000;
+}
+
+
+

@@ -1,0 +1,169 @@
+.hero-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    .overlay-hero{
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        opacity: 1;
+    }
+    /*Slider bg*/
+    .bg-slider-img{    
+        z-index: auto;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation: slide 10s ease-in-out infinite;
+        &:nth-child(1){
+            animation-delay: 0s;
+        }
+        &:nth-child(2){
+            animation-delay: 2s;
+        }
+        &:nth-child(3){
+            animation-delay: 4s;
+        }
+        &:nth-child(4){
+            animation-delay: 6s;
+        }
+        &:nth-child(5){
+            animation-delay: 8s; ;
+        }
+    }
+    .hero-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 10;
+
+        img {
+            padding-top: 15%;
+        }
+
+        div {
+            @include centrarDiv;
+            width: 60%;
+            padding-bottom: 50px;
+
+            .saber-mas {
+                padding: 10px 15px;
+                border-radius: 1000px;
+                background-color: $opacity-tertiary-color;
+                border: 1px $tertiary-color solid;
+                cursor: pointer;
+                font-size: 35px;
+                text-decoration: none;
+                color: $tertiary-color;
+
+                &:hover {
+                    transition-duration: 0.3s;
+                    color: $secondary-color;
+                    background-color: $tertiary-color;
+                    border: 1px $opacity-tertiary-color solid;
+                }
+                i{
+                    width: 100%;
+                    font-size: 40px;
+                }
+            }
+
+            p {
+                font-size: 25px;
+                text-align: center;
+                color: $tertiary-color;
+                padding: 0 0 50px 0;
+                
+            }
+        }
+
+    }
+}
+/*fin del slider*/
+.about-us {
+    @include centrarDiv;
+    width: 80%;
+    padding: 6rem 0;
+    text-align: center;
+    gap: 2em;
+    z-index: 20;
+
+}
+
+.our-services {
+    @include centrarDiv;
+    width: 100%;
+    gap: 2rem;
+    padding: 0 0 4rem;
+  
+
+}
+
+.clientes-container {
+    @include centrarDiv;
+    padding: 4rem 0;
+    width: 70%;
+    gap: 2rem;
+
+    .clientes-img-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        div {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+           
+            img {
+                display: inline-block;
+                padding: 20px 100px ;
+            }
+
+            .clientes-name {
+                font-size: 20px;
+                text-align: center;
+                font-weight: 450;
+            }
+        }
+    }
+}
+@keyframes slide{
+    0% {
+        opacity: 1;
+    }
+    10%{
+        opacity: 1;
+    }
+    20%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 0;
+    }
+    60%{
+        opacity: 0;
+    }
+    70%{
+        opacity: 0;
+    }
+    80%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}

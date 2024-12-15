@@ -1,0 +1,7 @@
+.form{
+    width: 50%;
+    @include centrarDiv;
+    text-align:left;
+    padding: 4rem 0;
+    gap: 1rem;
+}
