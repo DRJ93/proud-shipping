@@ -776,6 +776,9 @@ footer img {
 * img {
   display: inline-block;
 }
+* a {
+  text-decoration: none;
+}
 
 body {
   background-color: rgba(200, 213, 243, 0.5);
