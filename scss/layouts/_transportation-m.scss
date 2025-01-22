@@ -1,0 +1,18 @@
+@include services;
+
+#maritima {
+    background-image: url('/src/img/Mexproud-Maritimo.png');
+}
+
+#aerea {
+    background-image: url('/src/img/mexproud-shipping-paqueteria-logistica-exito-entregas-puntuales_50.jpg');
+    background-position:bottom;
+}
+
+#terrestre {
+    background-image: url('/src/img/Transportación-Terrestre.jpg');
+}
+
+#multimodal {
+    background-image: url('/src/img/servicio-en-destino-mexproud.jpg');//Esta se tiene que cambiar
+}

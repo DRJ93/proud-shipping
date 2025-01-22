@@ -1,0 +1,37 @@
+@mixin services {
+    .hero-section-transportation {
+        height: 80vh;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        width: 100%;
+        color: $opacity-tertiary-color;
+        @include centrarDiv;
+        justify-content: center;
+
+        .hero-section-transportation-text {
+            height: 80vh;
+            background-color: $opacity-primary-color;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 20em 0 2em;
+
+            h1 {
+                padding: 0.5em;
+            }
+
+            p {
+                width: 80%;
+            }
+        }
+    }
+
+    .especificaciones {
+        @include centrarDiv;
+        padding: 5em 0;
+
+    }
+}

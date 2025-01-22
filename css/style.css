@@ -1,3 +1,5 @@
+@charset "UTF-8";
+/*------*/
 footer {
   display: flex;
   width: 100%;
@@ -751,6 +753,63 @@ footer img {
     left: calc(var(--width) * -1);
   }
 }
+.hero-section-transportation {
+  height: 80vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  color: rgba(200, 213, 243, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  text-align: center;
+  justify-content: center;
+}
+.hero-section-transportation .hero-section-transportation-text {
+  height: 80vh;
+  background-color: rgba(21, 35, 80, 0.5);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20em 0 2em;
+}
+.hero-section-transportation .hero-section-transportation-text h1 {
+  padding: 0.5em;
+}
+.hero-section-transportation .hero-section-transportation-text p {
+  width: 80%;
+}
+
+.especificaciones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  text-align: center;
+  padding: 5em 0;
+}
+
+#maritima {
+  background-image: url("/src/img/Mexproud-Maritimo.png");
+}
+
+#aerea {
+  background-image: url("/src/img/mexproud-shipping-paqueteria-logistica-exito-entregas-puntuales_50.jpg");
+  background-position: bottom;
+}
+
+#terrestre {
+  background-image: url("/src/img/Transportación-Terrestre.jpg");
+}
+
+#multimodal {
+  background-image: url("/src/img/servicio-en-destino-mexproud.jpg");
+}
+
 * {
   margin: 0;
   font-size: 20px;
@@ -770,7 +829,8 @@ footer img {
 * i {
   font-size: 30px;
 }
-* p, * li {
+* p,
+* li {
   font-size: 20px;
 }
 * img {
